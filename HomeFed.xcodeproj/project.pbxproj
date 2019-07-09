@@ -7,21 +7,27 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8A7D7BA322D4634600C7E27A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7D7BA122D4634600C7E27A /* LaunchScreen.storyboard */; };
+		8A7D7BA622D4635D00C7E27A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A7D7BA422D4635D00C7E27A /* Main.storyboard */; };
+		8A7D7BA822D4648700C7E27A /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A7D7BA722D4648700C7E27A /* LoginViewController.swift */; };
 		8A8E964422CDC6D30064A25E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8E964322CDC6D30064A25E /* AppDelegate.swift */; };
 		8A8E964622CDC6D30064A25E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8E964522CDC6D30064A25E /* ViewController.swift */; };
-		8A8E964922CDC6D30064A25E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8E964722CDC6D30064A25E /* Main.storyboard */; };
 		8A8E964B22CDC6D30064A25E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8A8E964A22CDC6D30064A25E /* Assets.xcassets */; };
-		8A8E964E22CDC6D30064A25E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8A8E964C22CDC6D30064A25E /* LaunchScreen.storyboard */; };
+		8A8E965A22CE60800064A25E /* TutorialPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A8E965922CE60800064A25E /* TutorialPageViewController.swift */; };
+		8E39972522CFCE5100167542 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E39972422CFCE5100167542 /* SignupViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8A7D7BA222D4634600C7E27A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8A7D7BA522D4635D00C7E27A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8A7D7BA722D4648700C7E27A /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		8A8E964022CDC6D30064A25E /* HomeFed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomeFed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8A8E964322CDC6D30064A25E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8A8E964522CDC6D30064A25E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8A8E964822CDC6D30064A25E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8A8E964A22CDC6D30064A25E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8A8E964D22CDC6D30064A25E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A8E964F22CDC6D30064A25E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8A8E965922CE60800064A25E /* TutorialPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TutorialPageViewController.swift; sourceTree = "<group>"; };
+		8E39972422CFCE5100167542 /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,9 +62,12 @@
 			children = (
 				8A8E964322CDC6D30064A25E /* AppDelegate.swift */,
 				8A8E964522CDC6D30064A25E /* ViewController.swift */,
-				8A8E964722CDC6D30064A25E /* Main.storyboard */,
+				8E39972422CFCE5100167542 /* SignupViewController.swift */,
+				8A8E965922CE60800064A25E /* TutorialPageViewController.swift */,
 				8A8E964A22CDC6D30064A25E /* Assets.xcassets */,
-				8A8E964C22CDC6D30064A25E /* LaunchScreen.storyboard */,
+				8A7D7BA122D4634600C7E27A /* LaunchScreen.storyboard */,
+				8A7D7BA422D4635D00C7E27A /* Main.storyboard */,
+				8A7D7BA722D4648700C7E27A /* LoginViewController.swift */,
 				8A8E964F22CDC6D30064A25E /* Info.plist */,
 			);
 			path = HomeFed;
@@ -91,11 +100,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = SAV;
 				TargetAttributes = {
 					8A8E963F22CDC6D20064A25E = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 1020;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -123,9 +133,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8A8E964E22CDC6D30064A25E /* LaunchScreen.storyboard in Resources */,
+				8A7D7BA322D4634600C7E27A /* LaunchScreen.storyboard in Resources */,
+				8A7D7BA622D4635D00C7E27A /* Main.storyboard in Resources */,
 				8A8E964B22CDC6D30064A25E /* Assets.xcassets in Resources */,
-				8A8E964922CDC6D30064A25E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,6 +147,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8A8E964622CDC6D30064A25E /* ViewController.swift in Sources */,
+				8A8E965A22CE60800064A25E /* TutorialPageViewController.swift in Sources */,
+				8E39972522CFCE5100167542 /* SignupViewController.swift in Sources */,
+				8A7D7BA822D4648700C7E27A /* LoginViewController.swift in Sources */,
 				8A8E964422CDC6D30064A25E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,20 +157,20 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8A8E964722CDC6D30064A25E /* Main.storyboard */ = {
+		8A7D7BA122D4634600C7E27A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8A8E964822CDC6D30064A25E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8A8E964C22CDC6D30064A25E /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8A8E964D22CDC6D30064A25E /* Base */,
+				8A7D7BA222D4634600C7E27A /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		8A7D7BA422D4635D00C7E27A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8A7D7BA522D4635D00C7E27A /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -177,6 +190,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -184,6 +198,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -234,6 +249,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -241,6 +257,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -280,7 +297,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sav.HomeFed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -295,7 +312,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.sav.HomeFed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.0;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
