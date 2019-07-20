@@ -9,7 +9,7 @@
 import UIKit
 import GoogleSignIn
 
-class SignupViewController: UIViewController, GIDSignInUIDelegate {
+class SignupViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDelegate {
     
     @IBOutlet weak var nameTextField: UITextField!
     
@@ -29,6 +29,7 @@ class SignupViewController: UIViewController, GIDSignInUIDelegate {
         countyTextField.borderStyle = UITextField.BorderStyle.roundedRect
         confirmPasswordTextfield.borderStyle = UITextField.BorderStyle.roundedRect
         GIDSignIn.sharedInstance()?.uiDelegate = self
+        GIDSignIn.sharedInstance()?.delegate = self
     }
     
     @IBAction func signUp(_ sender: Any) {
@@ -48,12 +49,12 @@ class SignupViewController: UIViewController, GIDSignInUIDelegate {
             print("\(error.localizedDescription)")
         } else {
             // Perform any operations on signed in user here.
-            let userId = user.userID                  // For client-side use only!
-            let idToken = user.authentication.idToken // Safe to send to the server
-            let fullName = user.profile.name
-            let givenName = user.profile.givenName
-            let familyName = user.profile.familyName
-            let email = user.profile.email
+            _ = user.userID                  // For client-side use only!
+            _ = user.authentication.idToken // Safe to send to the server
+            _ = user.profile.name
+            _ = user.profile.givenName
+            _ = user.profile.familyName
+            _ = user.profile.email
             // ...
         }
     }
