@@ -12,6 +12,8 @@ class TutorialPageViewController: UIPageViewController {
     
     var pageControl = UIPageControl()
     var currentIndex: Int = 0
+    var exitButton = UIButton()
+    var signUpButton = UIButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +27,8 @@ class TutorialPageViewController: UIPageViewController {
         }
         
         configurePageControl()
+        configureExitButton()
+        configureSignupButton()
     }
     
     private(set) lazy var orderedViewControllers: [UIViewController] = {
@@ -48,6 +52,34 @@ class TutorialPageViewController: UIPageViewController {
         self.pageControl.pageIndicatorTintColor = UIColor.white
         self.pageControl.currentPageIndicatorTintColor = UIColor.black
         self.view.addSubview(pageControl)
+    }
+    
+    func configureExitButton() {
+        exitButton = UIButton(frame: CGRect(x: 30, y: 60, width: 50, height: 50))
+        exitButton.setTitle("Exit", for: .normal)
+        exitButton.setTitleColor(UIColor.black, for: .normal)
+        exitButton.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
+        self.view.addSubview(exitButton)
+    }
+    
+    @objc func buttonAction() {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func configureSignupButton() {
+        signUpButton.frame = CGRect(x: self.view.frame.size.width - 110, y: 60, width: 100, height: 50)
+        signUpButton.setTitleColor(UIColor.black, for: .normal)
+        signUpButton.setTitle("Signup", for: .normal)
+        signUpButton.addTarget(self, action: #selector(signUpButtonAction), for: .touchUpInside)
+        self.view.addSubview(signUpButton)
+    }
+    
+    @objc func signUpButtonAction() {
+        guard let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "SignUp") as? SignupViewController else {
+            return
+        }
+        
+        present(vc, animated: true, completion: nil)
     }
 }
 
