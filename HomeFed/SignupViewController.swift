@@ -57,5 +57,48 @@ class SignupViewController: UIViewController, GIDSignInUIDelegate, GIDSignInDele
             _ = user.profile.email
             // ...
         }
+        
+        verifyAuthIdToken(idToken: user.authentication.idToken)
+    }
+    
+    func verifyAuthIdToken(idToken: String) {
+        let signinEndpoint = "https://sleepy-hollows-17754.herokuapp.com/verify"
+        let params = [
+            "idtoken": idToken
+        ]
+        
+        var request = URLRequest(url: URL(string: signinEndpoint)!)
+        request.setValue("application/x-www-form-urlencoded", forHTTPHeaderField: "Content-Type")
+        request.httpMethod = "POST"
+        do {
+            let jsonData = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
+            // here "jsonData" is the dictionary encoded in JSON data
+            
+            request.httpBody = jsonData
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        let session = URLSession.shared
+        let dataTask = session.dataTask(with: request) { (data, response, error) in
+            
+            if let error = error {
+                print("Failure! \(error)")
+            } else if (response as? HTTPURLResponse) != nil {
+                print ("Success! \(data!)")
+                let greeting = self.parseJSON(data: data!)
+            } else {
+                print ("Failure! \(response!)")
+            }
+    }
+        dataTask.resume()
+    }
+    
+    func parseJSON(data: Data) -> String {
+        let json = (try? JSONSerialization.jsonObject(with: data, options: [])) as? [String:AnyObject]
+        if let json = json {
+            print(json)
+        }
+        return ""
     }
 }
